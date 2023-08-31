@@ -1,0 +1,1 @@
+<input type="text" name="<?= $code ?>" value="<?= htmlentities($value) ?>" style="width: 100%">
