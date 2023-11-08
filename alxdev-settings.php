@@ -18,7 +18,7 @@ $alxDevSettings = new AlxDevSettingsPlugin();
 // only text-type fields are supported so far
 $alxDevSettings->settings = [
     'Contacts' => [
-        'mysite-company-name' => Company legal name',
+        'mysite-company-name' => 'Company legal name',
         'mysite-inn' => 'VAT number',
         'mysite-phone' => 'phone number',
         'mysite-email' => 'Email',
