@@ -5,12 +5,12 @@ class AlxDevSettingsPlugin
     public $settings = []; // настраиваем снаружи
 
     public $menu_title = 'Дополнительные';
-    public $menu_slug = 'evrfly-settings';
+    public $menu_slug = 'alxdev-settings';
     public $menu_position = 1;
 
     public $page_title = 'Дополнительные настройки сайта';
-    public $settings_page = 'evrfly-settings';
-    public $settings_option_group = 'evrfly-settings';
+    public $settings_page = 'alxdev-settings';
+    public $settings_option_group = 'alxdev-settings';
 
     public $capability = 'manage_options';
 
@@ -49,8 +49,8 @@ class AlxDevSettingsPlugin
                     $setting = ['display_name' => $setting];
                 }
                 register_setting(
-                    option_name: $this->settings_option_group,
-                    option_group: $code,
+                    option_group: $this->settings_option_group,
+                    option_name: $code,
                     args: $setting['args'] ?? []
                 );
                 add_settings_field(
@@ -71,7 +71,7 @@ class AlxDevSettingsPlugin
     public function renderSettingsPage()
     {
         if (empty($this->settings)) {
-            echo 'Добавьте необходимые настройки в plugins/evrfly-setings/evrfly-settings.php';
+            echo 'Добавьте необходимые настройки в plugins/alxdev-setings/alxdev-settings.php';
             return;
         }
 
